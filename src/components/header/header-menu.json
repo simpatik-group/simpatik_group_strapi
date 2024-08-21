@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_header_header_menus",
+  "info": {
+    "displayName": "menu",
+    "icon": "layer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "customField",
+      "options": {
+        "pattern": "title"
+      },
+      "customField": "plugin::slug.slug"
+    }
+  }
+}

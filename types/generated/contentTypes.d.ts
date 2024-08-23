@@ -788,6 +788,70 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiCareerCareer extends Schema.SingleType {
+  collectionName: 'careers';
+  info: {
+    singularName: 'career';
+    pluralName: 'careers';
+    displayName: 'Career';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    hero_title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_text: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    vacancy: Attribute.Component<'career.vacancies', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    vacancy_button: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career.career',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::career.career',
+      'oneToMany',
+      'api::career.career'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiContactContact extends Schema.SingleType {
   collectionName: 'contacts';
   info: {
@@ -905,7 +969,7 @@ export interface ApiHeaderHeader extends Schema.SingleType {
   info: {
     singularName: 'header';
     pluralName: 'headers';
-    displayName: 'Common';
+    displayName: 'Header';
     description: '';
   };
   options: {
@@ -921,12 +985,6 @@ export interface ApiHeaderHeader extends Schema.SingleType {
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
-        };
-      }>;
-    menu: Attribute.Component<'header.header-menu', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
         };
       }>;
     address_title: Attribute.String &
@@ -990,6 +1048,12 @@ export interface ApiHeaderHeader extends Schema.SingleType {
         };
       }>;
     instagram: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    menu: Attribute.Component<'header.header-menu', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1117,6 +1181,74 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   };
 }
 
+export interface ApiLifeLife extends Schema.SingleType {
+  collectionName: 'lives';
+  info: {
+    singularName: 'life';
+    pluralName: 'lives';
+    displayName: 'Life';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    hero_title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_text: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    advantages_title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    advantages: Attribute.Component<'life.advantages', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    news_title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    loadmore_button: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::life.life', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::life.life', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::life.life',
+      'oneToMany',
+      'api::life.life'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiLocationLocation extends Schema.SingleType {
   collectionName: 'locations';
   info: {
@@ -1191,6 +1323,8 @@ export interface ApiPostPost extends Schema.CollectionType {
         }
       >;
     content: Attribute.Blocks;
+    photos_title: Attribute.String;
+    photos: Attribute.Media<'images', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1198,6 +1332,56 @@ export interface ApiPostPost extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+  };
+}
+
+export interface ApiTeamTeam extends Schema.SingleType {
+  collectionName: 'teams';
+  info: {
+    singularName: 'team';
+    pluralName: 'teams';
+    displayName: 'Team';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    hero_title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_text: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    departaments: Attribute.Component<'team.departament', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::team.team',
+      'oneToMany',
+      'api::team.team'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1219,11 +1403,14 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::career.career': ApiCareerCareer;
       'api::contact.contact': ApiContactContact;
       'api::header.header': ApiHeaderHeader;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::life.life': ApiLifeLife;
       'api::location.location': ApiLocationLocation;
       'api::post.post': ApiPostPost;
+      'api::team.team': ApiTeamTeam;
     }
   }
 }

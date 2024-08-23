@@ -4,7 +4,7 @@
   "info": {
     "singularName": "header",
     "pluralName": "headers",
-    "displayName": "Common",
+    "displayName": "Header",
     "description": ""
   },
   "options": {
@@ -28,16 +28,6 @@
           "localized": false
         }
       }
-    },
-    "menu": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "header.header-menu"
     },
     "address_title": {
       "pluginOptions": {
@@ -126,6 +116,16 @@
         }
       },
       "type": "string"
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "header.header-menu"
     }
   }
 }

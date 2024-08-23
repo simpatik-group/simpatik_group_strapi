@@ -12,11 +12,7 @@
       "required": true
     },
     "url": {
-      "type": "customField",
-      "options": {
-        "pattern": "title"
-      },
-      "customField": "plugin::slug.slug"
+      "type": "string"
     }
   }
 }

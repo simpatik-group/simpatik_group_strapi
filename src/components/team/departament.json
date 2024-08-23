@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_team_departaments",
+  "info": {
+    "displayName": "departament",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

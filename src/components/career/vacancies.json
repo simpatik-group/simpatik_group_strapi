@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_career_vacancies",
+  "info": {
+    "displayName": "vacancies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

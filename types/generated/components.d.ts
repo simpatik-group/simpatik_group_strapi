@@ -20,6 +20,29 @@ export interface LocationsLocations extends Schema.Component {
   };
 }
 
+export interface TeamDepartament extends Schema.Component {
+  collectionName: 'components_team_departaments';
+  info: {
+    displayName: 'departament';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media<'images', true>;
+    title: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface LifeAdvantages extends Schema.Component {
+  collectionName: 'components_life_advantages';
+  info: {
+    displayName: 'advantages';
+  };
+  attributes: {
+    title: Attribute.String;
+    text: Attribute.Text;
+  };
+}
+
 export interface HomepagePartnerLogos extends Schema.Component {
   collectionName: 'components_homepage_partner_logos';
   info: {
@@ -64,13 +87,20 @@ export interface HeaderHeaderMenu extends Schema.Component {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    url: Attribute.String &
-      Attribute.CustomField<
-        'plugin::slug.slug',
-        {
-          pattern: 'title';
-        }
-      >;
+    url: Attribute.String;
+  };
+}
+
+export interface CareerVacancies extends Schema.Component {
+  collectionName: 'components_career_vacancies';
+  info: {
+    displayName: 'vacancies';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    url: Attribute.String;
   };
 }
 
@@ -78,10 +108,13 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'locations.locations': LocationsLocations;
+      'team.departament': TeamDepartament;
+      'life.advantages': LifeAdvantages;
       'homepage.partner-logos': HomepagePartnerLogos;
       'homepage.homepage-numbers': HomepageHomepageNumbers;
       'homepage.feedbacks': HomepageFeedbacks;
       'header.header-menu': HeaderHeaderMenu;
+      'career.vacancies': CareerVacancies;
     }
   }
 }

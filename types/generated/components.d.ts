@@ -1,16 +1,28 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Struct, Schema } from '@strapi/strapi';
 
-export interface LocationsLocations extends Schema.Component {
+export interface TeamDepartament extends Struct.ComponentSchema {
+  collectionName: 'components_team_departaments';
+  info: {
+    displayName: 'departament';
+    description: '';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface LocationsLocations extends Struct.ComponentSchema {
   collectionName: 'components_locations_locations';
   info: {
     displayName: 'locations';
     description: '';
   };
   attributes: {
-    title: Attribute.String;
-    text: Attribute.String;
-    position_homepage: Attribute.Integer &
-      Attribute.SetMinMax<
+    title: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+    position_homepage: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
         {
           min: 1;
           max: 4;
@@ -20,30 +32,18 @@ export interface LocationsLocations extends Schema.Component {
   };
 }
 
-export interface TeamDepartament extends Schema.Component {
-  collectionName: 'components_team_departaments';
-  info: {
-    displayName: 'departament';
-    description: '';
-  };
-  attributes: {
-    image: Attribute.Media<'images', true>;
-    title: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface LifeAdvantages extends Schema.Component {
+export interface LifeAdvantages extends Struct.ComponentSchema {
   collectionName: 'components_life_advantages';
   info: {
     displayName: 'advantages';
   };
   attributes: {
-    title: Attribute.String;
-    text: Attribute.Text;
+    title: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
-export interface HomepagePartnerLogos extends Schema.Component {
+export interface HomepagePartnerLogos extends Struct.ComponentSchema {
   collectionName: 'components_homepage_partner_logos';
   info: {
     displayName: 'partner_logos';
@@ -51,19 +51,19 @@ export interface HomepagePartnerLogos extends Schema.Component {
   attributes: {};
 }
 
-export interface HomepageHomepageNumbers extends Schema.Component {
+export interface HomepageHomepageNumbers extends Struct.ComponentSchema {
   collectionName: 'components_homepage_homepage_numbers';
   info: {
     displayName: 'numbers';
     description: '';
   };
   attributes: {
-    number: Attribute.String;
-    text: Attribute.String;
+    number: Schema.Attribute.String;
+    text: Schema.Attribute.String;
   };
 }
 
-export interface HomepageFeedbacks extends Schema.Component {
+export interface HomepageFeedbacks extends Struct.ComponentSchema {
   collectionName: 'components_homepage_feedbacks';
   info: {
     displayName: 'feedbacks';
@@ -71,14 +71,14 @@ export interface HomepageFeedbacks extends Schema.Component {
     description: '';
   };
   attributes: {
-    feedback_content: Attribute.Text;
-    feedback_person: Attribute.String;
-    feedback_company: Attribute.String;
-    feedback_photo: Attribute.Media<'images', true>;
+    feedback_content: Schema.Attribute.Text;
+    feedback_person: Schema.Attribute.String;
+    feedback_company: Schema.Attribute.String;
+    feedback_photo: Schema.Attribute.Media<'images', true>;
   };
 }
 
-export interface HeaderHeaderMenu extends Schema.Component {
+export interface HeaderHeaderMenu extends Struct.ComponentSchema {
   collectionName: 'components_header_header_menus';
   info: {
     displayName: 'menu';
@@ -86,29 +86,29 @@ export interface HeaderHeaderMenu extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    url: Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
   };
 }
 
-export interface CareerVacancies extends Schema.Component {
+export interface CareerVacancies extends Struct.ComponentSchema {
   collectionName: 'components_career_vacancies';
   info: {
     displayName: 'vacancies';
     description: '';
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    url: Attribute.String;
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    url: Schema.Attribute.String;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
-      'locations.locations': LocationsLocations;
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'team.departament': TeamDepartament;
+      'locations.locations': LocationsLocations;
       'life.advantages': LifeAdvantages;
       'homepage.partner-logos': HomepagePartnerLogos;
       'homepage.homepage-numbers': HomepageHomepageNumbers;

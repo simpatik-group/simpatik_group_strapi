@@ -26,6 +26,20 @@ export interface HeaderHeaderMenu extends Struct.ComponentSchema {
   };
 }
 
+export interface HeaderSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_header_social_links';
+  info: {
+    description: '';
+    displayName: 'social_links';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface HomepageFeedbacks extends Struct.ComponentSchema {
   collectionName: 'components_homepage_feedbacks';
   info: {
@@ -99,7 +113,7 @@ export interface TeamDepartament extends Struct.ComponentSchema {
     displayName: 'departament';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images', true>;
+    image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -109,6 +123,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'career.vacancies': CareerVacancies;
       'header.header-menu': HeaderHeaderMenu;
+      'header.social-links': HeaderSocialLinks;
       'homepage.feedbacks': HomepageFeedbacks;
       'homepage.homepage-numbers': HomepageHomepageNumbers;
       'homepage.partner-logos': HomepagePartnerLogos;

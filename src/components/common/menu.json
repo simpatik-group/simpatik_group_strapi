@@ -1,9 +1,7 @@
 {
-  "collectionName": "components_header_header_menus",
+  "collectionName": "components_common_menus",
   "info": {
-    "displayName": "menu",
-    "icon": "layer",
-    "description": ""
+    "displayName": "menu"
   },
   "options": {},
   "attributes": {
@@ -12,7 +10,8 @@
       "required": true
     },
     "url": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

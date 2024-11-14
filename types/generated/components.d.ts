@@ -13,23 +13,20 @@ export interface CareerVacancies extends Struct.ComponentSchema {
   };
 }
 
-export interface HeaderHeaderMenu extends Struct.ComponentSchema {
-  collectionName: 'components_header_header_menus';
+export interface CommonMenu extends Struct.ComponentSchema {
+  collectionName: 'components_common_menus';
   info: {
-    description: '';
     displayName: 'menu';
-    icon: 'layer';
   };
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface HeaderSocialLinks extends Struct.ComponentSchema {
-  collectionName: 'components_header_social_links';
+export interface CommonSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_common_social_links';
   info: {
-    description: '';
     displayName: 'social_links';
   };
   attributes: {
@@ -132,8 +129,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'career.vacancies': CareerVacancies;
-      'header.header-menu': HeaderHeaderMenu;
-      'header.social-links': HeaderSocialLinks;
+      'common.menu': CommonMenu;
+      'common.social-links': CommonSocialLinks;
       'homepage.fags': HomepageFags;
       'homepage.feedbacks': HomepageFeedbacks;
       'homepage.homepage-numbers': HomepageHomepageNumbers;

@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "headers",
+  "collectionName": "commons",
   "info": {
-    "singularName": "header",
-    "pluralName": "headers",
-    "displayName": "Header",
+    "singularName": "common",
+    "pluralName": "commons",
+    "displayName": "Common",
     "description": ""
   },
   "options": {
@@ -21,7 +21,8 @@
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images"
+        "images",
+        "files"
       ],
       "pluginOptions": {
         "i18n": {
@@ -47,7 +48,7 @@
       "type": "string",
       "required": true
     },
-    "phone_title": {
+    "hone_title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -71,7 +72,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email_text": {
       "pluginOptions": {
@@ -79,9 +81,11 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "menu": {
+      "displayName": "menu",
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -89,7 +93,7 @@
           "localized": true
         }
       },
-      "component": "header.header-menu"
+      "component": "common.menu"
     },
     "social_links": {
       "displayName": "social_links",
@@ -97,10 +101,10 @@
       "repeatable": true,
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "component": "header.social-links"
+      "component": "common.social-links"
     }
   }
 }

@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_header_social_links",
+  "collectionName": "components_common_social_links",
   "info": {
-    "displayName": "social_links",
-    "description": ""
+    "displayName": "social_links"
   },
   "options": {},
   "attributes": {
@@ -15,13 +14,13 @@
       "required": true
     },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ]
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

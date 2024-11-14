@@ -66,6 +66,16 @@
         }
       },
       "type": "string"
+    },
+    "advantages_title_shadow": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": false,
+      "unique": false
     }
   }
 }

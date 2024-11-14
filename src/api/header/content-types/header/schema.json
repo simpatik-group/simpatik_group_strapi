@@ -19,7 +19,7 @@
     "logo": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
@@ -35,7 +35,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "address_text": {
       "pluginOptions": {
@@ -43,7 +44,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "phone_title": {
       "pluginOptions": {
@@ -51,7 +53,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "phone_text": {
       "pluginOptions": {
@@ -59,7 +62,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email_title": {
       "pluginOptions": {

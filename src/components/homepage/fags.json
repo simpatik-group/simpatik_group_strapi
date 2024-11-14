@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_homepage_fags",
+  "info": {
+    "displayName": "fags"
+  },
+  "options": {},
+  "attributes": {
+    "fag_question": {
+      "type": "string",
+      "required": true
+    },
+    "faq_answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

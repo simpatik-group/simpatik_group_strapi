@@ -8,21 +8,16 @@
   "options": {},
   "attributes": {
     "feedback_content": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "feedback_person": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "feedback_company": {
-      "type": "string"
-    },
-    "feedback_photo": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "type": "string",
+      "required": true
     }
   }
 }

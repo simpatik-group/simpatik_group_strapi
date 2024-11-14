@@ -40,6 +40,17 @@ export interface HeaderSocialLinks extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageFags extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_fags';
+  info: {
+    displayName: 'fags';
+  };
+  attributes: {
+    fag_question: Schema.Attribute.String & Schema.Attribute.Required;
+    faq_answer: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
 export interface HomepageFeedbacks extends Struct.ComponentSchema {
   collectionName: 'components_homepage_feedbacks';
   info: {
@@ -48,10 +59,9 @@ export interface HomepageFeedbacks extends Struct.ComponentSchema {
     icon: 'write';
   };
   attributes: {
-    feedback_company: Schema.Attribute.String;
-    feedback_content: Schema.Attribute.Text;
-    feedback_person: Schema.Attribute.String;
-    feedback_photo: Schema.Attribute.Media<'images', true>;
+    feedback_company: Schema.Attribute.String & Schema.Attribute.Required;
+    feedback_content: Schema.Attribute.Text & Schema.Attribute.Required;
+    feedback_person: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -62,8 +72,8 @@ export interface HomepageHomepageNumbers extends Struct.ComponentSchema {
     displayName: 'numbers';
   };
   attributes: {
-    number: Schema.Attribute.String;
-    text: Schema.Attribute.String;
+    number: Schema.Attribute.String & Schema.Attribute.Required;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -124,6 +134,7 @@ declare module '@strapi/strapi' {
       'career.vacancies': CareerVacancies;
       'header.header-menu': HeaderHeaderMenu;
       'header.social-links': HeaderSocialLinks;
+      'homepage.fags': HomepageFags;
       'homepage.feedbacks': HomepageFeedbacks;
       'homepage.homepage-numbers': HomepageHomepageNumbers;
       'homepage.partner-logos': HomepagePartnerLogos;

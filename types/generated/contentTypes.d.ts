@@ -718,7 +718,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    history_decription: Schema.Attribute.Text &
+    history_description: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -744,8 +744,28 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::homepage.homepage'
     >;
-    military_aid: Schema.Attribute.Relation<'oneToOne', 'api::post.post'>;
     military_aid_button: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    military_aid_description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    military_aid_shadow: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    military_aid_title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

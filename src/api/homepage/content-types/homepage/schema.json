@@ -34,11 +34,6 @@
       "type": "string",
       "required": true
     },
-    "military_aid": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::post.post"
-    },
     "numbers_title": {
       "pluginOptions": {
         "i18n": {
@@ -202,7 +197,7 @@
       "type": "string",
       "required": true
     },
-    "history_decription": {
+    "history_description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -241,6 +236,33 @@
         }
       },
       "type": "string",
+      "required": true
+    },
+    "military_aid_title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "military_aid_shadow": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "military_aid_description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
       "required": true
     }
   }

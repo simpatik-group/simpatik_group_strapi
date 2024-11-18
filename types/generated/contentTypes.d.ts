@@ -470,13 +470,6 @@ export interface ApiCommonCommon extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    hone_title: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::common.common'>;
     logo: Schema.Attribute.Media<'images' | 'files'> &
@@ -487,6 +480,7 @@ export interface ApiCommonCommon extends Struct.SingleTypeSchema {
         };
       }>;
     menu: Schema.Attribute.Component<'common.menu', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -499,8 +493,16 @@ export interface ApiCommonCommon extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    phone_title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     social_links: Schema.Attribute.Component<'common.social-links', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -637,6 +639,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     fag: Schema.Attribute.Component<'homepage.fags', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -685,6 +688,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
         };
       }>;
     feedbacks: Schema.Attribute.Component<'homepage.feedbacks', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -780,6 +784,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
         };
       }>;
     numbers: Schema.Attribute.Component<'homepage.homepage-numbers', true> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

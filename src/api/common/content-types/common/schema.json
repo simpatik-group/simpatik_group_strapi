@@ -48,7 +48,7 @@
       "type": "string",
       "required": true
     },
-    "hone_title": {
+    "phone_title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -93,7 +93,8 @@
           "localized": true
         }
       },
-      "component": "common.menu"
+      "component": "common.menu",
+      "required": true
     },
     "social_links": {
       "displayName": "social_links",
@@ -104,7 +105,8 @@
           "localized": true
         }
       },
-      "component": "common.social-links"
+      "component": "common.social-links",
+      "required": true
     }
   }
 }

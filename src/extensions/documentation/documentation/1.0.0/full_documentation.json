@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-11-15T16:22:46.613Z"
+    "x-generation-date": "2024-11-18T07:27:41.488Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4771,10 +4771,12 @@
               "logo",
               "address_title",
               "address_text",
-              "hone_title",
+              "phone_title",
               "phone_text",
               "email_title",
-              "email_text"
+              "email_text",
+              "menu",
+              "social_links"
             ],
             "type": "object",
             "properties": {
@@ -4795,7 +4797,7 @@
               "address_text": {
                 "type": "string"
               },
-              "hone_title": {
+              "phone_title": {
                 "type": "string"
               },
               "phone_text": {
@@ -4881,10 +4883,12 @@
           "logo",
           "address_title",
           "address_text",
-          "hone_title",
+          "phone_title",
           "phone_text",
           "email_title",
-          "email_text"
+          "email_text",
+          "menu",
+          "social_links"
         ],
         "properties": {
           "id": {
@@ -5497,7 +5501,7 @@
           "address_text": {
             "type": "string"
           },
-          "hone_title": {
+          "phone_title": {
             "type": "string"
           },
           "phone_text": {
@@ -5704,7 +5708,7 @@
                 "address_text": {
                   "type": "string"
                 },
-                "hone_title": {
+                "phone_title": {
                   "type": "string"
                 },
                 "phone_text": {
@@ -6512,9 +6516,11 @@
               "hero_title",
               "hero_text",
               "numbers_title",
+              "numbers",
               "partners_title",
               "partners_text",
               "feedback_title",
+              "feedbacks",
               "numbers_title_shadow",
               "partners_title_shadow",
               "feedback_title_shadow",
@@ -6522,6 +6528,7 @@
               "fag_title_shadow",
               "fag_text",
               "fag_button",
+              "fag",
               "history_title",
               "history_title_shadow",
               "history_description",
@@ -6714,9 +6721,11 @@
           "hero_title",
           "hero_text",
           "numbers_title",
+          "numbers",
           "partners_title",
           "partners_text",
           "feedback_title",
+          "feedbacks",
           "numbers_title_shadow",
           "partners_title_shadow",
           "feedback_title_shadow",
@@ -6724,6 +6733,7 @@
           "fag_title_shadow",
           "fag_text",
           "fag_button",
+          "fag",
           "history_title",
           "history_title_shadow",
           "history_description",

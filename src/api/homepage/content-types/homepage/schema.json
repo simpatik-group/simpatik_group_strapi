@@ -52,7 +52,8 @@
           "localized": true
         }
       },
-      "component": "homepage.homepage-numbers"
+      "component": "homepage.homepage-numbers",
+      "required": true
     },
     "partners_title": {
       "pluginOptions": {
@@ -90,7 +91,8 @@
           "localized": true
         }
       },
-      "component": "homepage.feedbacks"
+      "component": "homepage.feedbacks",
+      "required": true
     },
     "partner_logos": {
       "type": "media",
@@ -177,7 +179,8 @@
           "localized": true
         }
       },
-      "component": "homepage.fags"
+      "component": "homepage.fags",
+      "required": true
     },
     "history_title": {
       "pluginOptions": {
@@ -266,18 +269,18 @@
       "required": true
     },
     "military_aid_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     }
   }
 }

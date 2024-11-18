@@ -7,8 +7,8 @@ export interface CareerVacancies extends Struct.ComponentSchema {
     displayName: 'vacancies';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String;
   };
 }
@@ -85,11 +85,12 @@ export interface HomepagePartnerLogos extends Struct.ComponentSchema {
 export interface LifeAdvantages extends Struct.ComponentSchema {
   collectionName: 'components_life_advantages';
   info: {
+    description: '';
     displayName: 'advantages';
   };
   attributes: {
-    text: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
+    text: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -108,8 +109,8 @@ export interface LocationsLocations extends Struct.ComponentSchema {
         },
         number
       >;
-    text: Schema.Attribute.String;
-    title: Schema.Attribute.String;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 

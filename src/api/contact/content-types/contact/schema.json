@@ -22,7 +22,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "send_button": {
       "pluginOptions": {
@@ -30,7 +31,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "form_title": {
       "pluginOptions": {
@@ -38,7 +40,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "input_name": {
       "pluginOptions": {
@@ -46,7 +49,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "input_phone": {
       "pluginOptions": {
@@ -54,7 +58,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "input_email": {
       "pluginOptions": {
@@ -62,7 +67,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "input_message": {
       "pluginOptions": {
@@ -70,7 +76,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "form_send_button": {
       "pluginOptions": {
@@ -78,7 +85,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "form_name": {
       "pluginOptions": {
@@ -86,7 +94,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "form_phone": {
       "pluginOptions": {
@@ -94,7 +103,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "form_email": {
       "pluginOptions": {
@@ -102,7 +112,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "form_message": {
       "pluginOptions": {
@@ -110,7 +121,26 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "title_shadow": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "form_title_shadow": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }

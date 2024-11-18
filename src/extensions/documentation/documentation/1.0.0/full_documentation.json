@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-11-18T09:08:14.921Z"
+    "x-generation-date": "2024-11-18T11:43:56.047Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -4264,6 +4264,12 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "hero_title",
+              "hero_text",
+              "vacancy_button",
+              "hero_title_shadow"
+            ],
             "type": "object",
             "properties": {
               "hero_title": {
@@ -4279,6 +4285,9 @@
                 }
               },
               "vacancy_button": {
+                "type": "string"
+              },
+              "hero_title_shadow": {
                 "type": "string"
               },
               "locale": {
@@ -4339,6 +4348,12 @@
       },
       "Career": {
         "type": "object",
+        "required": [
+          "hero_title",
+          "hero_text",
+          "vacancy_button",
+          "hero_title_shadow"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -4359,6 +4374,9 @@
             }
           },
           "vacancy_button": {
+            "type": "string"
+          },
+          "hero_title_shadow": {
             "type": "string"
           },
           "createdAt": {
@@ -4674,6 +4692,9 @@
                   }
                 },
                 "vacancy_button": {
+                  "type": "string"
+                },
+                "hero_title_shadow": {
                   "type": "string"
                 },
                 "createdAt": {
@@ -5223,6 +5244,22 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "title",
+              "send_button",
+              "form_title",
+              "input_name",
+              "input_phone",
+              "input_email",
+              "input_message",
+              "form_send_button",
+              "form_name",
+              "form_phone",
+              "form_email",
+              "form_message",
+              "title_shadow",
+              "form_title_shadow"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -5259,6 +5296,12 @@
                 "type": "string"
               },
               "form_message": {
+                "type": "string"
+              },
+              "title_shadow": {
+                "type": "string"
+              },
+              "form_title_shadow": {
                 "type": "string"
               },
               "locale": {
@@ -5319,6 +5362,22 @@
       },
       "Contact": {
         "type": "object",
+        "required": [
+          "title",
+          "send_button",
+          "form_title",
+          "input_name",
+          "input_phone",
+          "input_email",
+          "input_message",
+          "form_send_button",
+          "form_name",
+          "form_phone",
+          "form_email",
+          "form_message",
+          "title_shadow",
+          "form_title_shadow"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -5360,6 +5419,12 @@
             "type": "string"
           },
           "form_message": {
+            "type": "string"
+          },
+          "title_shadow": {
+            "type": "string"
+          },
+          "form_title_shadow": {
             "type": "string"
           },
           "createdAt": {
@@ -5696,6 +5761,12 @@
                   "type": "string"
                 },
                 "form_message": {
+                  "type": "string"
+                },
+                "title_shadow": {
+                  "type": "string"
+                },
+                "form_title_shadow": {
                   "type": "string"
                 },
                 "createdAt": {
@@ -7590,6 +7661,18 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "hero_title",
+              "hero_text",
+              "advantages_title",
+              "advantages",
+              "news_title",
+              "loadmore_button",
+              "advantages_title_shadow",
+              "hero_title_shadow",
+              "news_title_shadow",
+              "video_url"
+            ],
             "type": "object",
             "properties": {
               "hero_title": {
@@ -7614,6 +7697,15 @@
                 "type": "string"
               },
               "advantages_title_shadow": {
+                "type": "string"
+              },
+              "hero_title_shadow": {
+                "type": "string"
+              },
+              "news_title_shadow": {
+                "type": "string"
+              },
+              "video_url": {
                 "type": "string"
               },
               "locale": {
@@ -7674,6 +7766,18 @@
       },
       "Life": {
         "type": "object",
+        "required": [
+          "hero_title",
+          "hero_text",
+          "advantages_title",
+          "advantages",
+          "news_title",
+          "loadmore_button",
+          "advantages_title_shadow",
+          "hero_title_shadow",
+          "news_title_shadow",
+          "video_url"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -7703,6 +7807,15 @@
             "type": "string"
           },
           "advantages_title_shadow": {
+            "type": "string"
+          },
+          "hero_title_shadow": {
+            "type": "string"
+          },
+          "news_title_shadow": {
+            "type": "string"
+          },
+          "video_url": {
             "type": "string"
           },
           "createdAt": {
@@ -8029,6 +8142,15 @@
                 "advantages_title_shadow": {
                   "type": "string"
                 },
+                "hero_title_shadow": {
+                  "type": "string"
+                },
+                "news_title_shadow": {
+                  "type": "string"
+                },
+                "video_url": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -8117,6 +8239,11 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "location",
+              "title",
+              "title_shadow"
+            ],
             "type": "object",
             "properties": {
               "location": {
@@ -8126,6 +8253,9 @@
                 }
               },
               "title": {
+                "type": "string"
+              },
+              "title_shadow": {
                 "type": "string"
               },
               "locale": {
@@ -8186,6 +8316,11 @@
       },
       "Location": {
         "type": "object",
+        "required": [
+          "location",
+          "title",
+          "title_shadow"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -8200,6 +8335,9 @@
             }
           },
           "title": {
+            "type": "string"
+          },
+          "title_shadow": {
             "type": "string"
           },
           "createdAt": {
@@ -8511,6 +8649,9 @@
                 "title": {
                   "type": "string"
                 },
+                "title_shadow": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -8603,7 +8744,11 @@
         "properties": {
           "data": {
             "required": [
-              "title"
+              "title",
+              "content",
+              "slug",
+              "photos_title_shadow",
+              "type"
             ],
             "type": "object",
             "properties": {
@@ -8640,6 +8785,19 @@
                 }
               },
               "slug": {
+                "type": "string"
+              },
+              "photos_title_shadow": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "news",
+                  "charity"
+                ]
+              },
+              "subtitle": {
                 "type": "string"
               },
               "locale": {
@@ -8701,7 +8859,11 @@
       "Post": {
         "type": "object",
         "required": [
-          "title"
+          "title",
+          "content",
+          "slug",
+          "photos_title_shadow",
+          "type"
         ],
         "properties": {
           "id": {
@@ -9450,6 +9612,19 @@
           "slug": {
             "type": "string"
           },
+          "photos_title_shadow": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "news",
+              "charity"
+            ]
+          },
+          "subtitle": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -9769,6 +9944,19 @@
                 "slug": {
                   "type": "string"
                 },
+                "photos_title_shadow": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "news",
+                    "charity"
+                  ]
+                },
+                "subtitle": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -9843,6 +10031,12 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "hero_title",
+              "hero_text",
+              "departaments",
+              "hero_title_shadow"
+            ],
             "type": "object",
             "properties": {
               "hero_title": {
@@ -9856,6 +10050,9 @@
                 "items": {
                   "$ref": "#/components/schemas/TeamDepartamentComponent"
                 }
+              },
+              "hero_title_shadow": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -9915,6 +10112,12 @@
       },
       "Team": {
         "type": "object",
+        "required": [
+          "hero_title",
+          "hero_text",
+          "departaments",
+          "hero_title_shadow"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -9933,6 +10136,9 @@
             "items": {
               "$ref": "#/components/schemas/TeamDepartamentComponent"
             }
+          },
+          "hero_title_shadow": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -9993,6 +10199,9 @@
                   "items": {
                     "$ref": "#/components/schemas/TeamDepartamentComponent"
                   }
+                },
+                "hero_title_shadow": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",

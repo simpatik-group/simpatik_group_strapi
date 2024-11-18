@@ -22,7 +22,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "hero_text": {
       "type": "text",
@@ -30,7 +31,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "vacancy": {
       "displayName": "Vacancies",
@@ -49,7 +51,17 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "hero_title_shadow": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -25,7 +25,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "title": {
       "type": "string",
@@ -33,7 +34,17 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
+    },
+    "title_shadow": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }

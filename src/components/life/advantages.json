@@ -1,15 +1,18 @@
 {
   "collectionName": "components_life_advantages",
   "info": {
-    "displayName": "advantages"
+    "displayName": "advantages",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "text": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

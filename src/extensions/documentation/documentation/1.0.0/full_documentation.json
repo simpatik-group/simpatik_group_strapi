@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-11-18T11:43:56.047Z"
+    "x-generation-date": "2024-11-18T16:33:09.412Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -5869,7 +5869,8 @@
               "military_aid_title",
               "military_aid_shadow",
               "military_aid_description",
-              "military_aid_cover"
+              "military_aid_cover",
+              "location_button"
             ],
             "type": "object",
             "properties": {
@@ -5990,6 +5991,9 @@
                 ],
                 "example": "string or id"
               },
+              "location_button": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -6074,7 +6078,8 @@
           "military_aid_title",
           "military_aid_shadow",
           "military_aid_description",
-          "military_aid_cover"
+          "military_aid_cover",
+          "location_button"
         ],
         "properties": {
           "id": {
@@ -7023,6 +7028,9 @@
               }
             }
           },
+          "location_button": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -7541,6 +7549,9 @@
                       }
                     }
                   }
+                },
+                "location_button": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",

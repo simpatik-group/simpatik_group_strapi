@@ -281,6 +281,15 @@
           "localized": false
         }
       }
+    },
+    "location_button": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }

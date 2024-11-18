@@ -472,13 +472,6 @@ export interface ApiCommonCommon extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::common.common'>;
-    logo: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     menu: Schema.Attribute.Component<'common.menu', true> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

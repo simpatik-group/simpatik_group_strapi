@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@v3
 
       # Встановлення SSH-клієнта
-      - name: Install SSH client
-        run: sudo apt-get update && sudo apt-get install -y sshpass
+      #- name: Install SSH client
+      #  run: sudo apt-get update && sudo apt-get install -y sshpass
 
       # Виконання команд на сервері
       - name: Deploy on server

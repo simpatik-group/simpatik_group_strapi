@@ -1,3 +1,5 @@
+import { StrapiApp } from "@strapi/strapi/admin";
+
 export default {
   config: {
     locales: [
@@ -28,8 +30,15 @@ export default {
       // 'zh-Hans',
       // 'zh',
     ],
+    tutorials: false,
+    notifications: { releases: false },
+    // translations: {
+    //   en: {
+    //     "app.components.Welcome": "Your Custom Welcome Message"
+    //   },
+    // },
   },
-  bootstrap(app) {
-    console.log(app);
+  bootstrap(app: StrapiApp) {
+    // console.log(app);
   },
 };

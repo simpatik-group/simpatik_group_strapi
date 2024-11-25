@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-11-22T17:41:05.405Z"
+    "x-generation-date": "2024-11-25T09:25:29.687Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -5302,7 +5302,8 @@
               "email_title",
               "email_text",
               "menu",
-              "social_links"
+              "social_links",
+              "social_title"
             ],
             "type": "object",
             "properties": {
@@ -5335,6 +5336,9 @@
                 "items": {
                   "$ref": "#/components/schemas/CommonSocialLinksComponent"
                 }
+              },
+              "social_title": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -5402,7 +5406,8 @@
           "email_title",
           "email_text",
           "menu",
-          "social_links"
+          "social_links",
+          "social_title"
         ],
         "properties": {
           "id": {
@@ -5440,6 +5445,9 @@
             "items": {
               "$ref": "#/components/schemas/CommonSocialLinksComponent"
             }
+          },
+          "social_title": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -5518,6 +5526,9 @@
                   "items": {
                     "$ref": "#/components/schemas/CommonSocialLinksComponent"
                   }
+                },
+                "social_title": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",

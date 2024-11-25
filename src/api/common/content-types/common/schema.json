@@ -93,6 +93,15 @@
       },
       "component": "common.social-links",
       "required": true
+    },
+    "social_title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }

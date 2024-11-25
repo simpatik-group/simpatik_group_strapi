@@ -39,8 +39,8 @@ jobs:
               echo "dist directory does not exist. Skipping removal."
             fi
 
-            echo "Stashing local changes..."
-            git stash
+            echo "Reset local changes..."
+            git reset --hard
 
             echo "Pulling latest version from Git..."
             git pull

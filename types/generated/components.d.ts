@@ -1,5 +1,19 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutUsSections extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_sections';
+  info: {
+    description: '';
+    displayName: 'sections';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files', true>;
+    text: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title_shadow: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface CareerVacancies extends Struct.ComponentSchema {
   collectionName: 'components_career_vacancies';
   info: {
@@ -130,6 +144,7 @@ export interface TeamDepartament extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about-us.sections': AboutUsSections;
       'career.vacancies': CareerVacancies;
       'common.menu': CommonMenu;
       'common.social-links': CommonSocialLinks;

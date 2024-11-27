@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-11-27T20:15:40.629Z"
+    "x-generation-date": "2024-11-27T21:10:52.381Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -7242,7 +7242,11 @@
               "form_email",
               "form_message",
               "title_shadow",
-              "form_title_shadow"
+              "form_title_shadow",
+              "popup_success_title",
+              "popup_success_text",
+              "popup_problem_title",
+              "popup_problem_text"
             ],
             "type": "object",
             "properties": {
@@ -7286,6 +7290,18 @@
                 "type": "string"
               },
               "form_title_shadow": {
+                "type": "string"
+              },
+              "popup_success_title": {
+                "type": "string"
+              },
+              "popup_success_text": {
+                "type": "string"
+              },
+              "popup_problem_title": {
+                "type": "string"
+              },
+              "popup_problem_text": {
                 "type": "string"
               },
               "locale": {
@@ -7360,7 +7376,11 @@
           "form_email",
           "form_message",
           "title_shadow",
-          "form_title_shadow"
+          "form_title_shadow",
+          "popup_success_title",
+          "popup_success_text",
+          "popup_problem_title",
+          "popup_problem_text"
         ],
         "properties": {
           "id": {
@@ -7409,6 +7429,18 @@
             "type": "string"
           },
           "form_title_shadow": {
+            "type": "string"
+          },
+          "popup_success_title": {
+            "type": "string"
+          },
+          "popup_success_text": {
+            "type": "string"
+          },
+          "popup_problem_title": {
+            "type": "string"
+          },
+          "popup_problem_text": {
             "type": "string"
           },
           "createdAt": {
@@ -7751,6 +7783,18 @@
                   "type": "string"
                 },
                 "form_title_shadow": {
+                  "type": "string"
+                },
+                "popup_success_title": {
+                  "type": "string"
+                },
+                "popup_success_text": {
+                  "type": "string"
+                },
+                "popup_problem_title": {
+                  "type": "string"
+                },
+                "popup_problem_text": {
                   "type": "string"
                 },
                 "createdAt": {

@@ -18,8 +18,8 @@ jobs:
       #- name: Install SSH client
       #  run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      # Виконання команд на сервері 1
-      - name: Deploy on server 1
+      # Виконання команд на сервері
+      - name: Deploy on server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -55,15 +55,3 @@ jobs:
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S systemctl start strapi
 
             echo "Deployment completed successfully!"
-
-      # Виконання команд на сервері 2
-      - name: Deploy on server 2 AAPanel
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.AAPANEL_IP }}
-          username: ${{ secrets.AAPANEL_SSH_USERNAME }}
-          password: ${{ secrets.AAPANEL_SSH_PASSWORD }}
-          port: ${{ secrets.AAPANEL_SSH_PORT }}
-          script: |
-            echo "Start ..."
-            echo "${{ secrets.AAPANEL_SSH_PASSWORD }}" | sudo -S bash /www/wwwroot/simpatik-group-strapi/deploy_aapanel.sh

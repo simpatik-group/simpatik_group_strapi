@@ -755,34 +755,6 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiEmailEmail extends Struct.CollectionTypeSchema {
-  collectionName: 'emails';
-  info: {
-    displayName: 'Email';
-    pluralName: 'emails';
-    singularName: 'email';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.String;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::email.email'> &
-      Schema.Attribute.Private;
-    message: Schema.Attribute.Text;
-    name: Schema.Attribute.String;
-    phone: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   collectionName: 'homepages';
   info: {
@@ -1156,6 +1128,39 @@ export interface ApiLocationLocation extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMessageMessage extends Struct.CollectionTypeSchema {
+  collectionName: 'messages';
+  info: {
+    description: '';
+    displayName: 'Messages';
+    pluralName: 'messages';
+    singularName: 'message';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::message.message'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    recaptcha: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1815,10 +1820,10 @@ declare module '@strapi/strapi' {
       'api::career.career': ApiCareerCareer;
       'api::common.common': ApiCommonCommon;
       'api::contact.contact': ApiContactContact;
-      'api::email.email': ApiEmailEmail;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::life.life': ApiLifeLife;
       'api::location.location': ApiLocationLocation;
+      'api::message.message': ApiMessageMessage;
       'api::post.post': ApiPostPost;
       'api::team.team': ApiTeamTeam;
       'plugin::content-releases.release': PluginContentReleasesRelease;

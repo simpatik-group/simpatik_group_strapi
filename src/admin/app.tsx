@@ -32,11 +32,12 @@ export default {
     ],
     tutorials: false,
     notifications: { releases: false },
-    // translations: {
-    //   en: {
-    //     "app.components.Welcome": "Your Custom Welcome Message"
-    //   },
-    // },
+    translations: {
+      en: {
+        "Auth.form.welcome.title": "Simpatik Group",
+        "Auth.form.welcome.subtitle": "Log in",
+      },
+    },
   },
   bootstrap(app: StrapiApp) {
     // console.log(app);

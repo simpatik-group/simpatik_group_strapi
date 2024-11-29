@@ -28,7 +28,7 @@
       "required": false
     },
     "recaptcha": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

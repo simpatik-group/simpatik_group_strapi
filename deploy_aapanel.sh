@@ -1,22 +1,22 @@
 #!/bin/bash
 
-PATH=/www/wwwroot/simpatik-group-strapi/node_modules/.bin:/www/server/nodejs/v20.18.1/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+PATH=/www/wwwroot/simpatik_group_strapi/node_modules/.bin:/www/server/nodejs/v20.18.1/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Start deployment Strapi service..."
 
 # Checking if the project directory exists
-if [ -d "/www/wwwroot/simpatik-group-strapi" ]; then
+if [ -d "/www/wwwroot/simpatik_group_strapi" ]; then
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] Project directory already exists. Skipping git cloning."
 else
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] Go to /www/wwwroot"
   cd /www/wwwroot || exit
  
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] Cloning project from GitHub..."
-  git clone https://github.com/simpatik-group/simpatik-group-strapi.git
+  git clone https://github.com/simpatik-group/simpatik_group_strapi.git
 fi
 
 # Looking for the Strapi process running via nohup
-PID=$(ps aux | grep 'node' | grep '/www/wwwroot/simpatik-group-strapi' | awk '{print $2}')
+PID=$(ps aux | grep 'node' | grep '/www/wwwroot/simpatik_group_strapi' | awk '{print $2}')
 
 if [ -n "$PID" ]; then
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] Found Strapi process with PID: $PID. Stopping it..."
@@ -32,7 +32,7 @@ else
 fi
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Go to the project directory..."
-cd /www/wwwroot/simpatik-group-strapi || exit
+cd /www/wwwroot/simpatik_group_strapi || exit
 
 if [ -d "dist" ]; then
  echo "[$(date '+%Y-%m-%d %H:%M:%S')] Removing dist directory..."
@@ -42,7 +42,7 @@ else
 fi
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Configuring git..."
-git config --global --add safe.directory /www/wwwroot/simpatik-group-strapi
+git config --global --add safe.directory /www/wwwroot/simpatik_group_strapi
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Reset local changes..."
 git reset --hard

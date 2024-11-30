@@ -16,7 +16,7 @@ else
 fi
 
 # Looking for the Strapi process running via nohup
-PID=$(ps aux | grep 'node' | grep '/www/wwwroot/simpatik_group_strapi' | awk '{print $2}')
+PID=$(cat /www/server/nodejs/vhost/pids/simpatik_group_strapi.pid)
 
 if [ -n "$PID" ]; then
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] Found Strapi process with PID: $PID. Stopping it..."

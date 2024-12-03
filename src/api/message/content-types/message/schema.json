@@ -26,9 +26,6 @@
     "message": {
       "type": "text",
       "required": false
-    },
-    "recaptcha": {
-      "type": "text"
     }
   }
 }

@@ -13,4 +13,16 @@ export default ({env}) => ({
       },
     },
   },
+  documentation: {
+    enabled: true,
+    config: {
+      servers: [
+        { url: 'https://test2.simpatik.group/api', description: 'Development server' },
+        { url: `http://${env('HOST')}/api`, description: 'Development server' },
+        { url: `https://${env('HOST')}/api`, description: 'Development server' },
+        { url: 'http://localhost:1337/api', description: 'Development server' },
+        { url: 'http://test.simpatik.group:1337/api', description: 'Development server' },
+      ],
+    }
+  },
 });

@@ -30,11 +30,12 @@ export interface CareerVacancies extends Struct.ComponentSchema {
 export interface CommonMenu extends Struct.ComponentSchema {
   collectionName: 'components_common_menus';
   info: {
+    description: '';
     displayName: 'menu';
   };
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
   };
 }
 

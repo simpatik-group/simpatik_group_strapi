@@ -1,7 +1,7 @@
 {
   "collectionName": "components_team_departaments",
   "info": {
-    "displayName": "departament",
+    "displayName": "department",
     "description": ""
   },
   "options": {},
@@ -16,6 +16,10 @@
     },
     "title": {
       "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
       "required": true
     }
   }

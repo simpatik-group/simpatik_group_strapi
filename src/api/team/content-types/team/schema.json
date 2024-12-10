@@ -34,7 +34,7 @@
       "type": "text",
       "required": true
     },
-    "departaments": {
+    "departments": {
       "displayName": "departament",
       "type": "component",
       "repeatable": true,

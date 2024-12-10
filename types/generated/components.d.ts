@@ -134,9 +134,10 @@ export interface TeamDepartament extends Struct.ComponentSchema {
   collectionName: 'components_team_departaments';
   info: {
     description: '';
-    displayName: 'departament';
+    displayName: 'department';
   };
   attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };

@@ -1269,7 +1269,7 @@ export interface ApiTeamTeam extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    departaments: Schema.Attribute.Component<'team.departament', true> &
+    departments: Schema.Attribute.Component<'team.departament', true> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

@@ -36,7 +36,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-09T17:29:01.832Z"
+    "x-generation-date": "2024-12-10T15:46:42.872Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12109,7 +12109,7 @@
             "required": [
               "hero_title",
               "hero_text",
-              "departaments",
+              "departments",
               "hero_title_shadow"
             ],
             "type": "object",
@@ -12120,7 +12120,7 @@
               "hero_text": {
                 "type": "string"
               },
-              "departaments": {
+              "departments": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/TeamDepartamentComponent"
@@ -12190,7 +12190,7 @@
         "required": [
           "hero_title",
           "hero_text",
-          "departaments",
+          "departments",
           "hero_title_shadow"
         ],
         "properties": {
@@ -12206,7 +12206,7 @@
           "hero_text": {
             "type": "string"
           },
-          "departaments": {
+          "departments": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TeamDepartamentComponent"
@@ -12269,7 +12269,7 @@
                 "hero_text": {
                   "type": "string"
                 },
-                "departaments": {
+                "departments": {
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/TeamDepartamentComponent"
@@ -12481,6 +12481,9 @@
             }
           },
           "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           }
         }

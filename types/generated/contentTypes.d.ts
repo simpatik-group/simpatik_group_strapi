@@ -1208,11 +1208,13 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
         };
       }>;
     photos_title: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'\u0424\u043E\u0442\u043E'>;
     photos_title_shadow: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1222,8 +1224,8 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<'PHOTOS'>;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    subtitle: Schema.Attribute.String &
+    subtitle: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1246,6 +1248,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
   };
 }
 

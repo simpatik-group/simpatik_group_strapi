@@ -53,7 +53,9 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "default": "Фото",
+      "required": true
     },
     "photos": {
       "type": "media",
@@ -68,7 +70,7 @@
         }
       }
     },
-    "slug": {
+    "url": {
       "type": "uid",
       "targetField": "title",
       "required": true
@@ -102,7 +104,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "text",
+      "required": true
     }
   }
 }

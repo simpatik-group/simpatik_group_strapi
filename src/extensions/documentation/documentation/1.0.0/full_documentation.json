@@ -36,7 +36,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-11T15:49:28.449Z"
+    "x-generation-date": "2024-12-12T14:29:29.453Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -5810,7 +5810,8 @@
               "hero_title",
               "hero_text",
               "vacancy_button",
-              "hero_title_shadow"
+              "hero_title_shadow",
+              "numbers"
             ],
             "type": "object",
             "properties": {
@@ -5831,6 +5832,12 @@
               },
               "hero_title_shadow": {
                 "type": "string"
+              },
+              "numbers": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/HomepageHomepageNumbersComponent"
+                }
               },
               "locale": {
                 "type": "string"
@@ -5894,7 +5901,8 @@
           "hero_title",
           "hero_text",
           "vacancy_button",
-          "hero_title_shadow"
+          "hero_title_shadow",
+          "numbers"
         ],
         "properties": {
           "id": {
@@ -5920,6 +5928,12 @@
           },
           "hero_title_shadow": {
             "type": "string"
+          },
+          "numbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HomepageHomepageNumbersComponent"
+            }
           },
           "createdAt": {
             "type": "string",
@@ -6239,6 +6253,12 @@
                 "hero_title_shadow": {
                   "type": "string"
                 },
+                "numbers": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HomepageHomepageNumbersComponent"
+                  }
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -6319,6 +6339,20 @@
             "type": "string"
           },
           "url": {
+            "type": "string"
+          }
+        }
+      },
+      "HomepageHomepageNumbersComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "number": {
+            "type": "string"
+          },
+          "text": {
             "type": "string"
           }
         }
@@ -9236,20 +9270,6 @@
           },
           "meta": {
             "type": "object"
-          }
-        }
-      },
-      "HomepageHomepageNumbersComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "number": {
-            "type": "string"
-          },
-          "text": {
-            "type": "string"
           }
         }
       },

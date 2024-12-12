@@ -62,6 +62,17 @@
       },
       "type": "string",
       "required": true
+    },
+    "numbers": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "homepage.homepage-numbers",
+      "required": true
     }
   }
 }

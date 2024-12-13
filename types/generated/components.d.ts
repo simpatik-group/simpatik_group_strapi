@@ -21,7 +21,11 @@ export interface CareerVacancies extends Struct.ComponentSchema {
     displayName: 'vacancies';
   };
   attributes: {
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String;
   };

@@ -12,7 +12,8 @@
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": true,
+      "maxLength": 200
     },
     "url": {
       "type": "string"

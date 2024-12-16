@@ -7,7 +7,7 @@ export interface AboutUsSections extends Struct.ComponentSchema {
     displayName: 'sections';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images' | 'files', true>;
+    image: Schema.Attribute.Media<'files' | 'images'>;
     text: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     title_shadow: Schema.Attribute.String & Schema.Attribute.Required;

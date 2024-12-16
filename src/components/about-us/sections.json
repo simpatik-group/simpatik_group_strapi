@@ -20,11 +20,11 @@
     },
     "image": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files"
+        "files",
+        "images"
       ]
     }
   }

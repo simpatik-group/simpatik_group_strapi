@@ -56,7 +56,8 @@
           "localized": true
         }
       },
-      "component": "about-us.sections"
+      "component": "about-us.sections",
+      "max": 10
     }
   }
 }

@@ -10,7 +10,7 @@ const validateFields = (fields: Record<string, any>, requiredFields: string[]): 
 
 const validationMessageMiddleware = (_, { strapi }) => {
   return async (ctx, next) => {
-  const requiredFields = ['name', 'phone', 'message'];
+  const requiredFields = ['name', 'phone', 'email', 'message'];
 
   const validation = validateFields(ctx.request.body.data, requiredFields);
 

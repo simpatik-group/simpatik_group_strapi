@@ -24,13 +24,13 @@ jobs:
       - name: Deploy on production server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: ${{ secrets.SSH_PORT }}
+          host: ${{ secrets.PROD_SERVER_IP }}
+          username: ${{ secrets.PROD_SSH_USERNAME }}
+          password: ${{ secrets.PROD_SSH_PASSWORD }}
+          port: ${{ secrets.PROD_SSH_PORT }}
           script: |
             echo "Stopping Strapi service..."
-            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S systemctl stop strapi
+            echo "${{ secrets.PROD_SSH_PASSWORD }}" | sudo -S systemctl stop strapi
 
             cd /home/max/simpatik-group-strapi || exit
 
@@ -54,11 +54,11 @@ jobs:
             npm run build
 
             echo "Starting Strapi service..."
-            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S systemctl start strapi
+            echo "${{ secrets.PROD_SSH_PASSWORD }}" | sudo -S systemctl start strapi
 
             echo "Production deployment completed!"
 
-  deploy-dev:
+  deploy-development:
     if: github.ref == 'refs/heads/dev'  # Запуск тільки для dev
     runs-on: ubuntu-latest
 

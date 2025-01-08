@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main  # Запускати workflow при пушах до гілки main
+      - dev   # Запускати workflow при пушах до гілки dev
 
 jobs:
-  deploy:
+  deploy-production:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +21,7 @@ jobs:
       #  run: sudo apt-get update && sudo apt-get install -y sshpass
 
       # Виконання команд на сервері
-      - name: Deploy on server
+      - name: Deploy on production server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -54,4 +56,55 @@ jobs:
             echo "Starting Strapi service..."
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S systemctl start strapi
 
-            echo "Deployment completed successfully!"
+            echo "Production deployment completed!"
+
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'  # Запуск тільки для dev
+    runs-on: ubuntu-latest
+
+    steps:
+      # Клонування репозиторію
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Деплой на dev сервер
+      - name: Deploy on development server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DEV_SERVER_IP }}
+          username: ${{ secrets.DEV_SSH_USERNAME }}
+          password: ${{ secrets.DEV_SSH_PASSWORD }}
+          port: ${{ secrets.DEV_SSH_PORT }}
+          script: |
+            echo "Stopping Strapi service..."
+            echo "${{ secrets.DEV_SSH_PASSWORD }}" | sudo -S systemctl stop strapi
+
+            cd /home/max/simpatik-group-strapi || exit
+
+            if [ -d "dist" ]; then
+              echo "Removing dist directory..."
+              rm -rf dist
+            else
+              echo "dist directory does not exist. Skipping removal."
+            fi
+
+            echo "Checking out dev branch..."
+            git fetch origin dev
+            git checkout dev
+
+            echo "Resetting local changes..."
+            git reset --hard
+
+            echo "Pulling latest version from dev branch..."
+            git pull origin dev
+
+            echo "Installing dependencies..."
+            npm install -y
+
+            echo "Building project..."
+            npm run build
+
+            echo "Starting Strapi service..."
+            echo "${{ secrets.DEV_SSH_PASSWORD }}" | sudo -S systemctl start strapi
+
+            echo "Development deployment completed!"

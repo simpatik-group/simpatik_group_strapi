@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "charities",
   "info": {
-    "singularName": "post",
-    "pluralName": "posts",
-    "displayName": "News",
+    "singularName": "charity",
+    "pluralName": "charities",
+    "displayName": "Charity",
     "description": ""
   },
   "options": {
@@ -21,7 +21,8 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images"
+        "images",
+        "files"
       ],
       "pluginOptions": {
         "i18n": {
@@ -30,65 +31,28 @@
       }
     },
     "title": {
-      "type": "string",
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "content": {
-      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true
-    },
-    "photos_title": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "default": "Фото",
       "required": true
-    },
-    "photos": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
     },
     "url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "uid",
       "targetField": "title",
       "required": true
     },
-    "photos_title_shadow": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true,
-      "default": "PHOTOS"
-    },
     "date": {
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
       "type": "date",
@@ -101,8 +65,50 @@
         }
       },
       "type": "text",
-      "maxLength": 200,
+      "required": true,
+      "maxLength": 200
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "blocks",
       "required": true
+    },
+    "photos_title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "Більше фото",
+      "required": true
+    },
+    "photos_title_shadow": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "default": "PHOTOS",
+      "required": true
+    },
+    "photos": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

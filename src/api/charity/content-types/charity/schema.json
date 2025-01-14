@@ -4,7 +4,7 @@
   "info": {
     "singularName": "charity",
     "pluralName": "charities",
-    "displayName": "Charity",
+    "displayName": "Charity news",
     "description": ""
   },
   "options": {
@@ -98,12 +98,13 @@
       "required": true
     },
     "photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true

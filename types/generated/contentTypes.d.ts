@@ -504,11 +504,64 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCharityPageCharityPage extends Struct.SingleTypeSchema {
+  collectionName: 'charity_pages';
+  info: {
+    description: '';
+    displayName: 'Charity page';
+    pluralName: 'charity-pages';
+    singularName: 'charity-page';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    hero_title_shadow: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::charity-page.charity-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    readmore_button: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCharityCharity extends Struct.CollectionTypeSchema {
   collectionName: 'charities';
   info: {
     description: '';
-    displayName: 'Charity';
+    displayName: 'Charity news';
     pluralName: 'charities';
     singularName: 'charity';
   };
@@ -1179,6 +1232,13 @@ export interface ApiLifeLife extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    readmore_button: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1934,6 +1994,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::career.career': ApiCareerCareer;
+      'api::charity-page.charity-page': ApiCharityPageCharityPage;
       'api::charity.charity': ApiCharityCharity;
       'api::common.common': ApiCommonCommon;
       'api::contact.contact': ApiContactContact;

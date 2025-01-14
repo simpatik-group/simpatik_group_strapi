@@ -36,7 +36,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-01-14T12:15:08.296Z"
+    "x-generation-date": "2025-01-14T12:24:03.738Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6915,7 +6915,8 @@
             "required": [
               "hero_title",
               "hero_title_shadow",
-              "readmore_button"
+              "readmore_button",
+              "loadmore_button"
             ],
             "type": "object",
             "properties": {
@@ -6926,6 +6927,9 @@
                 "type": "string"
               },
               "readmore_button": {
+                "type": "string"
+              },
+              "loadmore_button": {
                 "type": "string"
               },
               "locale": {
@@ -6989,7 +6993,8 @@
         "required": [
           "hero_title",
           "hero_title_shadow",
-          "readmore_button"
+          "readmore_button",
+          "loadmore_button"
         ],
         "properties": {
           "id": {
@@ -7005,6 +7010,9 @@
             "type": "string"
           },
           "readmore_button": {
+            "type": "string"
+          },
+          "loadmore_button": {
             "type": "string"
           },
           "createdAt": {
@@ -7314,6 +7322,9 @@
                   "type": "string"
                 },
                 "readmore_button": {
+                  "type": "string"
+                },
+                "loadmore_button": {
                   "type": "string"
                 },
                 "createdAt": {

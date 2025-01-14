@@ -538,6 +538,13 @@ export interface ApiCharityPageCharityPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    loadmore_button: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -30,7 +30,7 @@ const compareCareerWorkUaMiddleware = (_, { strapi }) => {
 
       try {
         const responseWorkUa: AxiosResponse<WorkUAResponse> = await axios.get(
-          'https://api.work.ua/jobs/my',
+          process.env.WORKUA_URL || 'https://api.work.ua/jobs/my',
           {
             params: {
               all: 1,

@@ -50,7 +50,7 @@ const compareCareerWorkUaMiddleware = (_, { strapi }) => {
           .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((item: VacancyItem) => {
             return {
-              id: item.id,
+              id: +item.id,
               title: item.name,
               url: `https://www.work.ua/jobs/${item.id}/`,
               date: item.date,

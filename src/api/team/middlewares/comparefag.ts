@@ -1,5 +1,6 @@
 const compareTeamFAQMiddleware = (_, { strapi }) => {
   return async (ctx, next) => {
+    const { locale } = ctx.query;
     try {
       const teamData = await strapi.entityService.findMany('api::team.team', {
         populate: {
@@ -7,6 +8,7 @@ const compareTeamFAQMiddleware = (_, { strapi }) => {
             populate: 'image'
           }
         },
+        locale,
       });
 
       const homepageData = await strapi.entityService.findMany('api::homepage.homepage', {
@@ -14,6 +16,7 @@ const compareTeamFAQMiddleware = (_, { strapi }) => {
           fag: true
         },
         fields: ['fag_title', 'fag_title_shadow', 'fag_text', 'fag_button'],
+        locale,
       });
 
       const combinedData = {

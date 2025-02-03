@@ -11,6 +11,7 @@ export default factories.createCoreRouter('api::message.message', {
       middlewares: [
         'api::message.recaptcha',
         'api::message.validation',
+        'api::message.emailtobaf',
       ]
     }
   }

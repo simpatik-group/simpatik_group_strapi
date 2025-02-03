@@ -4,7 +4,7 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post",
+    "displayName": "News",
     "description": ""
   },
   "options": {
@@ -85,26 +85,23 @@
       "required": true,
       "default": "PHOTOS"
     },
-    "type": {
+    "date": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "enumeration",
-      "enum": [
-        "news",
-        "charity"
-      ],
+      "type": "date",
       "required": true
     },
-    "subtitle": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "text",
+      "maxLength": 200,
       "required": true
     }
   }

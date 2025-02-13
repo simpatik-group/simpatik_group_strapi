@@ -16,12 +16,9 @@ const emailToBafMiddleware = (_, { strapi }) => {
       process.env.EMAIL_TO_BAF_URL,
       requestBody,
       {
-        params: {
-          N: 'Land',
-          P: 'LandLandLand',
-        },
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': process.env.EMAIL_TO_BAF_AUTH,
         },
       }
     ).then(() => {

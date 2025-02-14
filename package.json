@@ -11,10 +11,10 @@
     "deploy": "strapi deploy"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.10.2",
-    "@strapi/plugin-documentation": "5.10.2",
-    "@strapi/plugin-users-permissions": "5.10.2",
-    "@strapi/strapi": "5.10.2",
+    "@strapi/plugin-cloud": "5.9.0",
+    "@strapi/plugin-documentation": "5.9.0",
+    "@strapi/plugin-users-permissions": "5.9.0",
+    "@strapi/strapi": "5.9.0",
     "mysql2": "^3.11.3",
     "pg": "^8.13.0",
     "react": "^18.0.0",
@@ -24,13 +24,13 @@
     "styled-components": "^6.0.0"
   },
   "author": {
-    "name": "Maksym Didyk"
+    "name": "A Strapi developer"
   },
   "strapi": {
     "uuid": "937a76f4-6acc-47dc-9464-2d23adf93e03"
   },
   "engines": {
-    "node": ">=18.0.0 <=22.x.x",
+    "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

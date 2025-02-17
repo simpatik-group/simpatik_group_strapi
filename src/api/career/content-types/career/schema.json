@@ -73,6 +73,15 @@
       },
       "component": "homepage.homepage-numbers",
       "required": true
+    },
+    "workua_link": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

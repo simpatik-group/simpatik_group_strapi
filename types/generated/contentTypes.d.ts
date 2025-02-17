@@ -501,6 +501,13 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    workua_link: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 

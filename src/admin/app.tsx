@@ -25,7 +25,7 @@ export default {
       // 'sv',
       // 'th',
       // 'tr',
-      // 'uk',
+      'uk',
       // 'vi',
       // 'zh-Hans',
       // 'zh',
@@ -39,14 +39,16 @@ export default {
         "Settings.profile.form.section.experience.interfaceLanguageHelp": "Preference changes will apply only to you",
       },
       uk: {
+        "Auth.form.welcome.title": "Simpatik Group",
         "Auth.form.welcome.subtitle": "Вхід",
-        "Auth.form.rememberMe.label": "Запамятати мене",
+        "Settings.profile.form.section.experience.interfaceLanguageHelp": "Зміни переваг застосовуватимуться лише до вас",
+        "Auth.form.rememberMe.label": "Запам'ятати мене",
         "HomePage.header.title": "Вітаємо {name}",
         "HomePage.header.subtitle": "Ласкаво просимо до панелі адміністрування",
-        "global.save": "Зберегти",
-        "global.select": "Оберіть",
-        "global.password": "Пароль",
-        "global.finish": "Завершити",
+        // "global.save": "Зберегти",
+        // "global.select": "Оберіть",
+        // "global.password": "Пароль",
+        // "global.finish": "Завершити",
       },
     },
   },
@@ -59,9 +61,12 @@ export default {
       }
     });
 
-    observer.observe(document.querySelector("title"), {
-      childList: true,
-      subtree: true,
-    });
+    const titleElement = document.querySelector("title");
+    if (titleElement) {
+      observer.observe(titleElement, {
+        childList: true,
+        subtree: true,
+      });
+    }
   },
 };

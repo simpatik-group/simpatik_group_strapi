@@ -9,7 +9,8 @@ export default factories.createCoreRouter('api::career.career', {
   config: {
     find: {
       middlewares: [
-        'api::career.compareworkua',
+        'api::career.comparerabotaua',
+        // 'api::career.compareworkua',
       ]
     }
   }

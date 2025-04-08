@@ -1,11 +1,11 @@
 {
   "servers": [
     {
-      "url": "https://test2.simpatik.group/api",
+      "url": "https://test3.simpatik.group/api",
       "description": "Development server"
     },
     {
-      "url": "https://test3.simpatik.group/api",
+      "url": "https://test2.simpatik.group/api",
       "description": "Development server"
     },
     {

@@ -61,6 +61,12 @@ const compareCareerWorkUaMiddleware = (_, { strapi }) => {
           strapi.log.info(`WorkUa Request success`);
       } catch(error) {
         strapi.log.error(`WorkUa Request error: ${error.message}`);
+
+        // Sentry
+        strapi
+          .plugin('sentry')
+          .service('sentry')
+          .sendError(error);
       }
 
       const combinedData = {
@@ -74,6 +80,13 @@ const compareCareerWorkUaMiddleware = (_, { strapi }) => {
       await next();
     } catch (error) {
       strapi.log.error(`compareCareerWorkUaMiddleware error: ${error.message}`);
+
+      // Sentry
+      strapi
+        .plugin('sentry')
+        .service('sentry')
+        .sendError(error);
+
       ctx.throw(500, 'Internal server error during fetching data');
       return;
     }

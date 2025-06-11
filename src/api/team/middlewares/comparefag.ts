@@ -27,6 +27,11 @@ const compareTeamFAQMiddleware = (_, { strapi }) => {
       ctx.body = combinedData;
     } catch (error) {
       strapi.log.error(`compareTeamFAQMiddleware error 500`);
+      // Sentry
+      strapi
+        .plugin('sentry')
+        .service('sentry')
+        .sendError(error);
       ctx.throw(500, 'Помилка під час отримання даних');
       return;
     }

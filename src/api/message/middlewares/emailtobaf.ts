@@ -25,6 +25,12 @@ const emailToBafMiddleware = (_, { strapi }) => {
       strapi.log.info('Email request sent middleware: success');
     }).catch((error) => {
       strapi.log.error(`Error sending email to 1C: ${error.message}`);
+
+      // Sentry
+      strapi
+        .plugin('sentry')
+        .service('sentry')
+        .sendError(error);
     });
 
     strapi.log.info('emailToBafMiddleware started (non-blocking)');

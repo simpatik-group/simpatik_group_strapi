@@ -57,6 +57,11 @@ const recaptchaMiddleware= (_, { strapi }) => {
       await next();
     } catch (error) {
       strapi.log.error('reCAPTCHA verification failed', error);
+      // Sentry
+      strapi
+        .plugin('sentry')
+        .service('sentry')
+        .sendError(error);
       ctx.status = 500;
       ctx.body = { error: 'Internal server error during reCAPTCHA validation' };
     }

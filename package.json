@@ -13,6 +13,7 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.15.0",
     "@strapi/plugin-documentation": "5.15.0",
+    "@strapi/plugin-sentry": "^5.15.0",
     "@strapi/plugin-users-permissions": "5.15.0",
     "@strapi/strapi": "5.15.0",
     "mysql2": "^3.11.3",

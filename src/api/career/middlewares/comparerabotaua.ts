@@ -59,19 +59,7 @@ const compareCareerRabotaUaMiddleware = (_, { strapi }) => {
       ctx.status = 200;
       ctx.body = combinedData;
 
-      strapi.log.info('compareCareerRabotaUaMiddleware success');
-
-      // Verify if Sentry is enabled
-      // if (strapi.plugin('sentry').config('enabled')) {
-      //   strapi.plugin('sentry').service('sentry').sendError(new Error('Test Sentry error from compareCareerRabotaUaMiddleware'), {
-      //     tags: { source: 'compareCareerRabotaUaMiddleware' },
-      //     extra: { locale: ctx.query.locale },
-      //   });
-      // }
-
-      // ⬇️ Тестовая ошибка
-      // const testError = new Error('🔥 Sentry test error from middleware');
-      // strapi.plugin('sentry').service('sentry').sendError(testError);
+      strapi.log.info('compareCareerRabotaUaMiddleware finished');
 
       await next();
     } catch (error) {

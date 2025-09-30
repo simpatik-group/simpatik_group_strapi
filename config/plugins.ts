@@ -1,4 +1,12 @@
 export default ({env}) => ({
+  'users-permissions': {
+    config: {
+      jwtManagement: 'legacy-support',
+      jwt: {
+        expiresIn: '7d',
+      },
+    },
+  },
   upload: {
     config: {
       provider: "strapi4x4-ftp-provider",

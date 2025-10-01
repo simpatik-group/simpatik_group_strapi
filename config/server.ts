@@ -1,4 +1,5 @@
 export default ({ env }) => ({
+  url: env('PUBLIC_URL','https://test3.simpatik.group'),
   proxy: true,
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
